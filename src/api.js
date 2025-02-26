@@ -27,8 +27,6 @@ class JoblyApi {
     const headers = { Authorization: `Bearer ${JoblyApi.token}` };
     const params = method === "get" ? data : {};
 
-    console.log("REQUEST PAYLOAD", { url, data, method, params, headers });
-
     try {
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
